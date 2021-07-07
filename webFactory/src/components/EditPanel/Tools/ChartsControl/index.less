@@ -1,0 +1,93 @@
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  .downList {
+    position: absolute;
+    top: 0;
+    width: 400px;
+    height: 420px;
+    opacity: 0;
+    animation: show linear 0.2s;
+    animation-fill-mode: forwards;
+    left: calc(100% + 3px);
+    background-color: rgba(60, 60, 60);
+    .menu {
+      width: 100%;
+      display: flex;
+      font-size: 28px;
+      flex-wrap: wrap;
+      color: #ddd;
+      .item {
+        display: flex;
+        user-select: initial;
+        height: 60px;
+        border-bottom: 1px solid #222;
+        width: 80px;
+        justify-content: center;
+        align-items: center;
+        padding: 4px 10px;
+        background-color: rgba(38, 38, 38);
+        &:hover {
+          background-color: rgb(60, 60, 60);
+        }
+        &.active {
+          background-color: rgb(60, 60, 60);
+        }
+        span {
+          white-space: nowrap;
+          padding-left: 4px;
+        }
+      }
+    }
+  }
+}
+.chartsWrap {
+  overflow-x: auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 360px;
+  &::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 20px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    transition: all 0.15s linear;
+    background-color: #555;
+  }
+  .chartItem {
+    background-color: rgba(60, 60, 60);
+    border-bottom: 1px solid #222;
+    border-right: 1px solid #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33.33%;
+    height: 120px;
+    padding: 5px 0;
+    transition: background-color 0.1s linear;
+    &:hover {
+      background-color: rgb(50, 50, 50);
+    }
+    .chartImg {
+      width: 80%;
+      height: 70%;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+    .chartName {
+      padding-top: 8px;
+      font-size: 12px;
+    }
+  }
+}

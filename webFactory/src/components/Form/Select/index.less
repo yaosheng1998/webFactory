@@ -1,0 +1,33 @@
+.container {
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  background-color: #fff;
+  height: 32px;
+  &.disabled {
+    background-color: rgb(245, 245, 245);
+  }
+  .select {
+    font-size: 12px;
+    outline: none;
+    height: 100%;
+    .suffix {
+      font-size: 14px;
+      color: #555;
+    }
+  }
+}
+.dropdown {
+  border-radius: 1px;
+  padding: 0;
+  div[aria-selected] {
+    font-size: 12px;
+  }
+  div[aria-selected='true'] {
+    background-color: rgba(180, 180, 180);
+  }
+  div[aria-selected='false'] {
+    &:hover {
+      background-color: rgb(242, 242, 242);
+    }
+  }
+}

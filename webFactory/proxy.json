@@ -1,0 +1,10 @@
+{
+  "/local": {
+    "target": "http://localhost:3000",
+    "pathRewrite": {
+      "^/local": ""
+    },
+    "secure": false,
+    "changeOrigin": true
+  }
+}

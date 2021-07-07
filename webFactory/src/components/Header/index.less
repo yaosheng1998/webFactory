@@ -1,0 +1,75 @@
+.header {
+  display: flex;
+  position: relative;
+  z-index: 100;
+  .logoWrap {
+    display: flex;
+    width: 210px;
+    color: #fff;
+    align-items: center;
+    font-weight: 600;
+    .logo {
+      margin-right: 6px;
+      font-size: 34px;
+    }
+  }
+  &.hide {
+    display: none;
+  }
+  .userWrap {
+    position: absolute;
+    align-items: center;
+    display: flex;
+    right: 60px;
+    .userAvatar {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+    }
+    .userName {
+      padding-left: 15px;
+      color: #fff;
+    }
+  }
+}
+
+// .container {
+//   height: 50px;
+//   display: flex;
+//   border-bottom: 1px solid #ddd;
+//   box-shadow: 0 1px 5px 0 #ddd;
+//   align-items: center;
+//   justify-content: space-between;
+//   .titleWrap {
+//     padding: 0 20px;
+//     display: flex;
+//     align-items: center;
+//     .logo {
+//       font-size: 34px;
+//     }
+//     .title {
+//       margin-left: 5px;
+//       font-size: 18px;
+//       font-weight: 600;
+//     }
+//   }
+//   .userWrap {
+//     display: flex;
+//     margin-right: 50px;
+//     align-items: center;
+//     .avatar {
+//       height: 30px;
+//       width: 30px;
+//       border-radius: 50%;
+//       overflow: hidden;
+//       margin-right: 8px;
+//       img {
+//         height: 100%;
+//         width: 100%;
+//       }
+//     }
+//     .userName {
+//       font-size: 13px;
+//     }
+//   }
+// }

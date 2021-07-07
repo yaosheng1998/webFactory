@@ -1,0 +1,99 @@
+.container {
+  padding: 4.5% 22%;
+  .content {
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: rgb(204 204 204) 1px 1px 5px 1px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .spin {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      z-index: -999;
+      justify-content: center;
+      &.loading {
+        z-index: 9999;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+    .head {
+      height: 120px;
+      padding: 15px 55px;
+      background-color: rgba(235, 241, 255);
+      position: relative;
+      .avatarWrap {
+        display: flex;
+        .avatar {
+          height: 90px;
+          width: 90px;
+          border-radius: 50%;
+        }
+        .nameWrap {
+          margin-left: 25px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .name {
+            padding-bottom: 15px;
+            font-size: 20px;
+          }
+          .id {
+            font-size: 14px;
+            color: #999;
+          }
+        }
+      }
+      .logout {
+        position: absolute;
+        padding: 3px 18px;
+        right: 35px;
+        bottom: 25px;
+      }
+    }
+    .body {
+      flex: 1;
+      display: flex;
+      padding-top: 65px;
+      justify-content: center;
+      .form {
+        display: flex;
+        flex-direction: column;
+        .item {
+          display: flex;
+          align-items: center;
+          padding-bottom: 18px;
+          > span {
+            width: 80px;
+            font-size: 14px;
+            color: #888;
+          }
+          .input {
+            height: 35px;
+            width: 320px;
+            text-align: center;
+          }
+          .change {
+            width: 40px;
+            cursor: pointer;
+            font-size: 12px;
+            color: rgb(77, 116, 247);
+            padding-left: 15px;
+          }
+          &.birthday {
+            input {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

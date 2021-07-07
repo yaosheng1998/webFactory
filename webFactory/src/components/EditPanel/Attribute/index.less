@@ -1,0 +1,93 @@
+.container {
+  height: 100%;
+  color: #fff;
+  transition: all 0.15 linear;
+  background-color: rgb(51, 51, 51);
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 2px;
+    border-radius: 20px;
+  }
+  .text {
+    font-size: 16px;
+  }
+  .title {
+    padding: 10px 12px;
+    background-color: rgb(60, 60, 60);
+  }
+  .name {
+    padding: 14px 12px;
+    // background-color: rgb(37,37,38);
+  }
+  .content {
+    .item {
+      .folder {
+        .line {
+          display: flex;
+          align-items: center;
+          padding: 8px 0 8px 24px;
+          .btn {
+            border: 1px solid #ccc;
+            height: 31px;
+            padding: 8px 12px;
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            width: 100px;
+            background-color: rgb(69, 69, 69);
+            &:hover {
+              background-color: rgb(79, 79, 79);
+            }
+          }
+          .breakTitle {
+            font-size: 14px;
+            font-weight: 600;
+            width: 100px;
+            letter-spacing: 0.2em;
+          }
+          .breakSwitch {
+            margin-left: 136px;
+            &.lineSwitch {
+              margin-left: 156px;
+            }
+          }
+          > span {
+            width: 80px;
+            font-size: 13px;
+          }
+          .input {
+            width: 200px;
+            opacity: 0.95;
+            border-radius: 1px;
+          }
+        }
+        .size,
+        .position {
+          > span {
+            width: 60px;
+          }
+          .input {
+            width: 100px;
+            opacity: 0.95;
+            border-radius: 1px;
+            &:last-child {
+              margin-left: 20px;
+            }
+          }
+        }
+        .breakRule {
+          position: relative;
+          padding: 10px 5%;
+          &::before {
+            content: '';
+            // width: 80%;
+            display: block;
+            border-bottom: 1px solid #666;
+          }
+        }
+      }
+    }
+  }
+}

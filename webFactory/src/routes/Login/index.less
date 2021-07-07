@@ -1,0 +1,218 @@
+@keyframes point {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  80% {
+    height: 75px;
+    width: 75px;
+  }
+  100% {
+    height: 70px;
+    width: 70px;
+  }
+}
+@keyframes mask {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  .mask {
+    position: relative;
+    height: 100%;
+    width: 37.5%;
+    background-color: #666;
+    animation: mask 0.5s;
+    // background-color: rgb(41, 45, 48);
+    background: url(../../assets/image/login_left.jpg);
+    // background: url(https://img.pic88.com/preview/2020/08/05/15966472101334917.jpg!s640);
+    background-size: 100% 100%;
+    // background-position: 0 30%;
+    // background-repeat: no-repeat;
+    .line {
+      position: absolute;
+      right: 0;
+      width: 60%;
+      height: 2px;
+      background-color: #fff;
+      &.one {
+        bottom: calc(29% + 100px);
+      }
+      &.two {
+        bottom: calc(29% + 106px);
+      }
+    }
+    .point {
+      position: absolute;
+      right: -40px;
+      bottom: 29%;
+      width: 80px;
+      height: 80px;
+      transform: rotateZ(45deg);
+      background-color: #fff;
+      &::after {
+        content: '';
+        position: absolute;
+        height: 0px;
+        width: 0px;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: #222;
+        animation: point 0.4s linear;
+        animation-delay: 0.9s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+  .main {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    .decorate {
+      position: absolute;
+      border-radius: 50%;
+      &.1 {
+        bottom: -50px;
+        height: 130px;
+        width: 130px;
+        left: 150px;
+        background-image: linear-gradient(to top, #fff, #ddd);
+      }
+      &.2 {
+        right: -100px;
+        bottom: -160px;
+        height: 400px;
+        width: 400px;
+        background-image: linear-gradient(to top left, #fff, #ddd);
+      }
+      &.3 {
+        top: -10px;
+        right: -25px;
+        height: 100px;
+        width: 100px;
+        background-image: linear-gradient(to bottom left, #fff, #ddd);
+      }
+      &.4 {
+        left: -65px;
+        top: 140px;
+        height: 100px;
+        width: 100px;
+        background-image: linear-gradient(to right, #fff, #ddd);
+      }
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 65%;
+      width: 340px;
+      .title {
+        font-size: 22px;
+        letter-spacing: 0.1em;
+        font-weight: 600;
+        margin-bottom: 22%;
+      }
+      .inputWrap {
+        width: 100%;
+        position: relative;
+        .input {
+          opacity: 0.7;
+          margin-bottom: 10%;
+          &.repeat {
+            margin-bottom: 7%;
+          }
+        }
+        .inputIcon {
+          font-size: 20px;
+        }
+        .check {
+          position: absolute;
+          top: 5px;
+          right: -30px;
+          font-size: 18px;
+          transition: all 0.2s linear;
+          &.dui {
+            color: rgb(95, 182, 1);
+          }
+          &.cuo {
+            color: rgb(233, 95, 86);
+          }
+        }
+      }
+      .optionWrap {
+        width: 100%;
+        margin-bottom: 20px;
+        &:last-of-type {
+          margin-top: 16%;
+          font-size: 14px;
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          color: #aaa;
+          .register {
+            .button {
+              margin-left: 3px;
+              color: rgb(0, 160, 216);
+              cursor: pointer;
+              font-weight: 600;
+            }
+          }
+          .forget {
+            cursor: pointer;
+          }
+          .toLogin {
+            position: absolute;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            right: 0;
+            color: rgb(0, 160, 216);
+            > i {
+              font-size: 10px;
+              margin-left: 2px;
+            }
+          }
+        }
+        .rember {
+          display: flex;
+          align-items: center;
+          span {
+            margin-left: 4px;
+            white-space: nowrap;
+            font-size: 14px;
+          }
+        }
+      }
+      > .button {
+        cursor: pointer;
+        line-height: 40px;
+        text-align: center;
+        font-size: 15px;
+        letter-spacing: 0.2em;
+        font-weight: 600;
+        background-color: #555;
+        height: 40px;
+        color: #fff;
+        margin-top: 10%;
+        width: 90%;
+        &.isLogin {
+          margin-top: 10%;
+        }
+      }
+    }
+  }
+}

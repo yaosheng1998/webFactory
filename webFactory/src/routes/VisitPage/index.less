@@ -1,0 +1,21 @@
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .backBtn {
+    position: absolute;
+    left: 25px;
+    top: 8px;
+    z-index: 99999;
+  }
+  .area {
+    position: relative;
+    overflow: hidden;
+    .element {
+      position: absolute;
+    }
+  }
+}

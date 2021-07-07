@@ -1,0 +1,28 @@
+.container {
+  border-left: 2px solid #666;
+  .title {
+    padding: 16px 0 16px 24px;
+    background-color: rgb(41, 42, 44);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    > span {
+      font-size: 14px;
+      margin-left: 6px;
+    }
+    > i {
+      font-size: 18px;
+    }
+  }
+  .content {
+    overflow: hidden;
+    transition: all 0.15s linear;
+    &.hidden {
+      padding: 0;
+      height: 0;
+    }
+    .mask {
+      padding: 10px 0;
+    }
+  }
+}

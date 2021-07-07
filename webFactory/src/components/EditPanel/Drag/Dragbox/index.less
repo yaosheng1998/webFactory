@@ -1,0 +1,68 @@
+.container {
+  position: absolute;
+  outline: 0;
+  -webkit-user-select: none;
+  border: 1px solid transparent;
+  cursor: move;
+  // .dragObj {
+  //   position: relative;
+  //   height: 100%;
+  //   width: 100%;
+  //   z-index: 100;
+  .point {
+    display: none;
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    z-index: 999;
+    border: 1px solid #666;
+    background-color: #ccc;
+    &.left {
+      left: -4.5px;
+    }
+    &.top {
+      top: -4.5px;
+    }
+    &.right {
+      right: -4.5px;
+    }
+    &.bottom {
+      bottom: -4.5px;
+    }
+    &.midx {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &.midy {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &.rsLeftTop {
+      cursor: nw-resize;
+    }
+    &.rsMidTop {
+      cursor: n-resize;
+    }
+    &.rsRightTop {
+      cursor: ne-resize;
+    }
+    &.rsMidLeft {
+      cursor: w-resize;
+    }
+  }
+  &.selected {
+    border: 1px solid rgb(102, 102, 102);
+    .point {
+      display: inline-block;
+    }
+  }
+  // }
+  .dragWrap {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}

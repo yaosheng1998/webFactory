@@ -1,0 +1,37 @@
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  .downList {
+    position: absolute;
+    opacity: 0;
+    font-size: 14px;
+    top: 0;
+    padding: 2px;
+    animation: show linear 0.2s;
+    animation-fill-mode: forwards;
+    left: calc(100% + 3px);
+    background-color: rgba(60, 60, 60);
+    color: #ddd;
+    .item {
+      display: flex;
+      //   margin-bottom: 8px;
+      padding: 8px 18px;
+      &:hover {
+        background-color: rgb(39, 39, 39);
+      }
+      span {
+        white-space: nowrap;
+        padding-left: 4px;
+      }
+    }
+  }
+}

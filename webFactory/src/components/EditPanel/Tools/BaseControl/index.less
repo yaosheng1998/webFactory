@@ -1,0 +1,45 @@
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  .downList {
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    font-size: 28px;
+    top: 0;
+    width: 300px;
+    animation: show linear 0.2s;
+    animation-fill-mode: forwards;
+    left: calc(100% + 3px);
+    flex-wrap: wrap;
+    background-color: rgba(60, 60, 60);
+    color: #ddd;
+    .item {
+      display: flex;
+      border-right: 1px solid #222;
+      border-bottom: 1px solid #222;
+      user-select: initial;
+      height: 100px;
+      width: 33.33%;
+      justify-content: center;
+      align-items: center;
+      padding: 4px 10px;
+      &:hover {
+        background-color: rgb(39, 39, 39);
+      }
+      span {
+        white-space: nowrap;
+        padding-left: 4px;
+      }
+    }
+  }
+}
