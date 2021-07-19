@@ -3,10 +3,10 @@ const OSS = require('ali-oss');
 const fs = require('fs');
 
 const client = new OSS({
-  region: 'oss-cn-shanghai',
+  region: '',
   accessKeyId: '',
   accessKeySecret: '',
-  bucket: 'ys-webfactory-shanghai'
+  bucket: ''
 });
 
 module.exports = {
