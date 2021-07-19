@@ -4,8 +4,8 @@ const fs = require('fs');
 
 const client = new OSS({
   region: 'oss-cn-shanghai',
-  accessKeyId: 'LTAI5tHrkfVnmYiRcWQYuY59',
-  accessKeySecret: 'IJM4uWa21a4PSr60qmQhOzPyXXgnK8',
+  accessKeyId: '',
+  accessKeySecret: '',
   bucket: 'ys-webfactory-shanghai'
 });
 
